@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+<body>
+<div class="row p-3">
+    <div class="col-9">
+        <h2 th:text="#{contacts}">Contacts</h2>
+    </div>
+    <div class="col-3">
+        <a class="btn btn-success float-right" th:href="@{/contacts} + '?form'">
+            <i class="material-icons md-14">person_add</i>
+            <span  th:text="#{control.new}">Add newContact</span>
+        </a>
+    </div>
+</div>
+<form th:action="@{/contacts}" method="get" class="row gy-2 gx-3 align-items-center p-3 justify-content-end">
+    <div class="col-auto">
+        <input class="form-control me-2" type="search" th:placeholder="#{contact.firstname}" name="contactName" aria-label="Search">
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-outline-success  d-flex align-items-center" type="submit" th:text="#{control.find}">Find</button>
+    </div>
+</form>
+
+<form th:action="@{/contacts}" method="get">
+    <table id="contacts" class="table">
+        <thead>
+        <tr>
+            <th th:text="#{contact.firstname}">Firstname</th>
+            <th th:text="#{contact.lastname}">Lastname</th>
+            <th th:text="#{contact.nickname}">Nickname</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="contact : ${contacts}">
+            <td th:text="${contact.firstname}"></td>
+            <td th:text="${contact.lastname}"></td>
+            <td th:text="${contact.nickname}"></td>
+            <td>
+                <div class="btn-group float-right d-flex align-items-center" role="group">
+                    <a class="btn btn-primary" th:href="@{/contacts} + '/' + ${contact.id}">Show</a>
+                    <a class="btn btn-default"
+                       th:href="@{/contacts} + '/' + ${contact.id} + '?update-form'" h:text="#{control.edit}">Edit</a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+</body>
+</html>
