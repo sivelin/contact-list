@@ -73,14 +73,3 @@ There is an index.html file in the project where the project and its features ar
 * Code commented
 * Responsive Design
 * Good Usability
-
-## Project grading
-
-Nice looking application! I awarded you 3 points for the design.
-
-You were able to deliver a multi-modules application,
-adapted from a given template. Congratulations!
-
-Kindly Refer to [GradedExercise.xlsx](GradedExercise.xlsx) for grading details.
-
-Grade: **5.4**
