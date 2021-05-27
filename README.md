@@ -1,21 +1,10 @@
-# SWA Module, Graded Exercise
+# Contact List
 
 ## Project
 
-Matriculation Number: 17-552-498
+A Graded Exercise from the SWA Module.
 
-You might choose between following **Java** applications:
-* Contact list
-* Library
-
-The delivered application should be composed of multiple **modules** resp. should generate multiple **jars**.
-
-I'm mainly interested in the **backend** architecture. The **frontend** (probably in its own **module**/**component**) might be a **React** client, a simple **CLI**, and/or **Server Pages** based.
-
-To start the application, you might use one of the following mechanisms:
-* Using **Java** [modules](https://github.com/ribeaud/ch.fhnw.swa.modserv.cli/blob/master/Commands.txt).
-* [Repacking](https://ribeaud.github.io/SWA/lectures/5/#10) a multi-**modules** **Spring Boot** application into a single **jar**.
-* Using `-classpath` **Java** option.
+The delivered application is composed of multiple **modules** resp. generates multiple **jars**.
 
 #### Minimum requirements
 
@@ -24,12 +13,6 @@ The application should be able to, at least, do the following:
 * Create/edit one entity
 
 You will have to use a repository (or database), where you will _persist_ the entities. This repository could be a _real_ database (deployed via **Docker** for instance), an _in-memory_ one or a simple file.
-
-#### Suggested course of action
-
-1. Think about the components you will need
-1. Draw a component/class diagram
-1. Start to code
 
 #### Possible extensions
 
@@ -46,7 +29,6 @@ You will have to use a repository (or database), where you will _persist_ the en
 * [PetClinic](https://github.com/spring-projects/spring-petclinic)
 
 ## Project delivery
-(_to be filled by student_)
 
 #### Build
 ```
